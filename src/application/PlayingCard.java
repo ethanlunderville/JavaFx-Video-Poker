@@ -92,61 +92,61 @@ class OneDeck {
 				
 			}
 			
-			saveDeck.get(0).setCardVis(new Image(getClass().getResourceAsStream("ace_of_clubs.png")));
-			saveDeck.get(1).setCardVis(new Image(getClass().getResourceAsStream("2_of_clubs.png")));
-			saveDeck.get(2).setCardVis(new Image(getClass().getResourceAsStream("3_of_clubs.png")));
-			saveDeck.get(3).setCardVis(new Image(getClass().getResourceAsStream("4_of_clubs.png")));
-			saveDeck.get(4).setCardVis(new Image(getClass().getResourceAsStream("5_of_clubs.png")));
-			saveDeck.get(5).setCardVis(new Image(getClass().getResourceAsStream("6_of_clubs.png")));
-			saveDeck.get(6).setCardVis(new Image(getClass().getResourceAsStream("7_of_clubs.png")));
-			saveDeck.get(7).setCardVis(new Image(getClass().getResourceAsStream("8_of_clubs.png")));
-			saveDeck.get(8).setCardVis(new Image(getClass().getResourceAsStream("9_of_clubs.png")));
-			saveDeck.get(9).setCardVis(new Image(getClass().getResourceAsStream("10_of_clubs.png")));
-			saveDeck.get(10).setCardVis(new Image(getClass().getResourceAsStream("jack_of_clubs.png")));
-			saveDeck.get(11).setCardVis(new Image(getClass().getResourceAsStream("queen_of_clubs.png")));
-			saveDeck.get(12).setCardVis(new Image(getClass().getResourceAsStream("king_of_clubs.png")));
+			saveDeck.get(0).setCardVis(new Image(getClass().getResourceAsStream("Cards/ace_of_clubs.png")));
+			saveDeck.get(1).setCardVis(new Image(getClass().getResourceAsStream("Cards/2_of_clubs.png")));
+			saveDeck.get(2).setCardVis(new Image(getClass().getResourceAsStream("Cards/3_of_clubs.png")));
+			saveDeck.get(3).setCardVis(new Image(getClass().getResourceAsStream("Cards/4_of_clubs.png")));
+			saveDeck.get(4).setCardVis(new Image(getClass().getResourceAsStream("Cards/5_of_clubs.png")));
+			saveDeck.get(5).setCardVis(new Image(getClass().getResourceAsStream("Cards/6_of_clubs.png")));
+			saveDeck.get(6).setCardVis(new Image(getClass().getResourceAsStream("Cards/7_of_clubs.png")));
+			saveDeck.get(7).setCardVis(new Image(getClass().getResourceAsStream("Cards/8_of_clubs.png")));
+			saveDeck.get(8).setCardVis(new Image(getClass().getResourceAsStream("Cards/9_of_clubs.png")));
+			saveDeck.get(9).setCardVis(new Image(getClass().getResourceAsStream("Cards/10_of_clubs.png")));
+			saveDeck.get(10).setCardVis(new Image(getClass().getResourceAsStream("Cards/jack_of_clubs2.png")));
+			saveDeck.get(11).setCardVis(new Image(getClass().getResourceAsStream("Cards/queen_of_clubs2.png")));
+			saveDeck.get(12).setCardVis(new Image(getClass().getResourceAsStream("Cards/king_of_clubs2.png")));
 			//
-			saveDeck.get(13).setCardVis(new Image(getClass().getResourceAsStream("ace_of_diamonds.png")));
-			saveDeck.get(14).setCardVis(new Image(getClass().getResourceAsStream("2_of_diamonds.png")));
-			saveDeck.get(15).setCardVis(new Image(getClass().getResourceAsStream("3_of_diamonds.png")));
-			saveDeck.get(16).setCardVis(new Image(getClass().getResourceAsStream("4_of_diamonds.png")));
-			saveDeck.get(17).setCardVis(new Image(getClass().getResourceAsStream("5_of_diamonds.png")));
-			saveDeck.get(18).setCardVis(new Image(getClass().getResourceAsStream("6_of_diamonds.png")));
-			saveDeck.get(19).setCardVis(new Image(getClass().getResourceAsStream("7_of_diamonds.png")));
-			saveDeck.get(20).setCardVis(new Image(getClass().getResourceAsStream("8_of_diamonds.png")));
-			saveDeck.get(21).setCardVis(new Image(getClass().getResourceAsStream("9_of_diamonds.png")));
-			saveDeck.get(22).setCardVis(new Image(getClass().getResourceAsStream("10_of_diamonds.png")));
-			saveDeck.get(23).setCardVis(new Image(getClass().getResourceAsStream("jack_of_diamonds.png")));
-			saveDeck.get(24).setCardVis(new Image(getClass().getResourceAsStream("queen_of_diamonds.png")));
-			saveDeck.get(25).setCardVis(new Image(getClass().getResourceAsStream("king_of_diamonds.png")));
+			saveDeck.get(13).setCardVis(new Image(getClass().getResourceAsStream("Cards/ace_of_diamonds.png")));
+			saveDeck.get(14).setCardVis(new Image(getClass().getResourceAsStream("Cards/2_of_diamonds.png")));
+			saveDeck.get(15).setCardVis(new Image(getClass().getResourceAsStream("Cards/3_of_diamonds.png")));
+			saveDeck.get(16).setCardVis(new Image(getClass().getResourceAsStream("Cards/4_of_diamonds.png")));
+			saveDeck.get(17).setCardVis(new Image(getClass().getResourceAsStream("Cards/5_of_diamonds.png")));
+			saveDeck.get(18).setCardVis(new Image(getClass().getResourceAsStream("Cards/6_of_diamonds.png")));
+			saveDeck.get(19).setCardVis(new Image(getClass().getResourceAsStream("Cards/7_of_diamonds.png")));
+			saveDeck.get(20).setCardVis(new Image(getClass().getResourceAsStream("Cards/8_of_diamonds.png")));
+			saveDeck.get(21).setCardVis(new Image(getClass().getResourceAsStream("Cards/9_of_diamonds.png")));
+			saveDeck.get(22).setCardVis(new Image(getClass().getResourceAsStream("Cards/10_of_diamonds.png")));
+			saveDeck.get(23).setCardVis(new Image(getClass().getResourceAsStream("Cards/jack_of_diamonds2.png")));
+			saveDeck.get(24).setCardVis(new Image(getClass().getResourceAsStream("Cards/queen_of_diamonds2.png")));
+			saveDeck.get(25).setCardVis(new Image(getClass().getResourceAsStream("Cards/king_of_diamonds2.png")));
 			//
-			saveDeck.get(26).setCardVis(new Image(getClass().getResourceAsStream("ace_of_hearts.png")));
-			saveDeck.get(27).setCardVis(new Image(getClass().getResourceAsStream("2_of_hearts.png")));
-			saveDeck.get(28).setCardVis(new Image(getClass().getResourceAsStream("3_of_hearts.png")));
-			saveDeck.get(29).setCardVis(new Image(getClass().getResourceAsStream("4_of_hearts.png")));
-			saveDeck.get(30).setCardVis(new Image(getClass().getResourceAsStream("5_of_hearts.png")));
-			saveDeck.get(31).setCardVis(new Image(getClass().getResourceAsStream("6_of_hearts.png")));
-			saveDeck.get(32).setCardVis(new Image(getClass().getResourceAsStream("7_of_hearts.png")));
-			saveDeck.get(33).setCardVis(new Image(getClass().getResourceAsStream("8_of_hearts.png")));
-			saveDeck.get(34).setCardVis(new Image(getClass().getResourceAsStream("9_of_hearts.png")));
-			saveDeck.get(35).setCardVis(new Image(getClass().getResourceAsStream("10_of_hearts.png")));
-			saveDeck.get(36).setCardVis(new Image(getClass().getResourceAsStream("jack_of_hearts.png")));
-			saveDeck.get(37).setCardVis(new Image(getClass().getResourceAsStream("queen_of_hearts.png")));
-			saveDeck.get(38).setCardVis(new Image(getClass().getResourceAsStream("king_of_hearts.png")));
+			saveDeck.get(26).setCardVis(new Image(getClass().getResourceAsStream("Cards/ace_of_hearts.png")));
+			saveDeck.get(27).setCardVis(new Image(getClass().getResourceAsStream("Cards/2_of_hearts.png")));
+			saveDeck.get(28).setCardVis(new Image(getClass().getResourceAsStream("Cards/3_of_hearts.png")));
+			saveDeck.get(29).setCardVis(new Image(getClass().getResourceAsStream("Cards/4_of_hearts.png")));
+			saveDeck.get(30).setCardVis(new Image(getClass().getResourceAsStream("Cards/5_of_hearts.png")));
+			saveDeck.get(31).setCardVis(new Image(getClass().getResourceAsStream("Cards/6_of_hearts.png")));
+			saveDeck.get(32).setCardVis(new Image(getClass().getResourceAsStream("Cards/7_of_hearts.png")));
+			saveDeck.get(33).setCardVis(new Image(getClass().getResourceAsStream("Cards/8_of_hearts.png")));
+			saveDeck.get(34).setCardVis(new Image(getClass().getResourceAsStream("Cards/9_of_hearts.png")));
+			saveDeck.get(35).setCardVis(new Image(getClass().getResourceAsStream("Cards/10_of_hearts.png")));
+			saveDeck.get(36).setCardVis(new Image(getClass().getResourceAsStream("Cards/jack_of_hearts2.png")));
+			saveDeck.get(37).setCardVis(new Image(getClass().getResourceAsStream("Cards/queen_of_hearts2.png")));
+			saveDeck.get(38).setCardVis(new Image(getClass().getResourceAsStream("Cards/king_of_hearts2.png")));
 			//
-			saveDeck.get(39).setCardVis(new Image(getClass().getResourceAsStream("ace_of_spades.png")));
-			saveDeck.get(40).setCardVis(new Image(getClass().getResourceAsStream("2_of_spades.png")));
-			saveDeck.get(41).setCardVis(new Image(getClass().getResourceAsStream("3_of_spades.png")));
-			saveDeck.get(42).setCardVis(new Image(getClass().getResourceAsStream("4_of_spades.png")));
-			saveDeck.get(43).setCardVis(new Image(getClass().getResourceAsStream("5_of_spades.png")));
-			saveDeck.get(44).setCardVis(new Image(getClass().getResourceAsStream("6_of_spades.png")));
-			saveDeck.get(45).setCardVis(new Image(getClass().getResourceAsStream("7_of_spades.png")));
-			saveDeck.get(46).setCardVis(new Image(getClass().getResourceAsStream("8_of_spades.png")));
-			saveDeck.get(47).setCardVis(new Image(getClass().getResourceAsStream("9_of_spades.png")));
-			saveDeck.get(48).setCardVis(new Image(getClass().getResourceAsStream("10_of_spades.png")));
-			saveDeck.get(49).setCardVis(new Image(getClass().getResourceAsStream("jack_of_spades.png")));
-			saveDeck.get(50).setCardVis(new Image(getClass().getResourceAsStream("queen_of_spades.png")));
-			saveDeck.get(51).setCardVis(new Image(getClass().getResourceAsStream("king_of_spades.png")));
+			saveDeck.get(39).setCardVis(new Image(getClass().getResourceAsStream("Cards/ace_of_spades.png")));
+			saveDeck.get(40).setCardVis(new Image(getClass().getResourceAsStream("Cards/2_of_spades.png")));
+			saveDeck.get(41).setCardVis(new Image(getClass().getResourceAsStream("Cards/3_of_spades.png")));
+			saveDeck.get(42).setCardVis(new Image(getClass().getResourceAsStream("Cards/4_of_spades.png")));
+			saveDeck.get(43).setCardVis(new Image(getClass().getResourceAsStream("Cards/5_of_spades.png")));
+			saveDeck.get(44).setCardVis(new Image(getClass().getResourceAsStream("Cards/6_of_spades.png")));
+			saveDeck.get(45).setCardVis(new Image(getClass().getResourceAsStream("Cards/7_of_spades.png")));
+			saveDeck.get(46).setCardVis(new Image(getClass().getResourceAsStream("Cards/8_of_spades.png")));
+			saveDeck.get(47).setCardVis(new Image(getClass().getResourceAsStream("Cards/9_of_spades.png")));
+			saveDeck.get(48).setCardVis(new Image(getClass().getResourceAsStream("Cards/10_of_spades.png")));
+			saveDeck.get(49).setCardVis(new Image(getClass().getResourceAsStream("Cards/jack_of_spades2.png")));
+			saveDeck.get(50).setCardVis(new Image(getClass().getResourceAsStream("Cards/queen_of_spades2.png")));
+			saveDeck.get(51).setCardVis(new Image(getClass().getResourceAsStream("Cards/king_of_spades2.png")));
 			
 			//copies save deck to the playdeck
 			for (int i = 0;i<saveDeck.size(); i++) {
@@ -154,32 +154,25 @@ class OneDeck {
 			}
 		}
 		catch(Exception PlayingCardException) {
-			new PlayingCardException("oopsies");
+			new PlayingCardException("Card Exception");
 		}
 	
 		
-///		
+	
 	}
-//shuffles any given deck
+
 	public void shuffle()
 	{
 		for(int i = 0;i<playDeck.size();i++) {
 			int random = (int)(Math.random() * playDeck.size() );
-			int rank = playDeck.get(random).getRank();
-			int suit = playDeck.get(random).getSuit();
 
-			playDeck.remove(random);
-			try {
-				playDeck.add(new Card(rank, suit));
-			}catch(Exception e) {
-				System.out.println("issue with shuffle method");
+			Card temp = playDeck.get(i);
+			playDeck.set(i, playDeck.get(random));
+			playDeck.set(random, temp);
 			}
 
-		}
-
 	}
-//returns a list of cards of specified size
-//removes cards that are in this list
+
 	public List<Card> deal(int numberCards) throws PlayingCardException
 	{
 		List<Card> reList = null;
@@ -194,6 +187,7 @@ try {
 
 			for(int i = 0;i<numberCards;i++) {
 				reList.add(playDeck.get(i));	
+				
 
 			}
 			for(int i = 0;i<reList.size();i++) {
@@ -221,8 +215,13 @@ try {
 	{
 		return playDeck.size();
 	}
-	public String toString()
+	public void toString1()
 	{
-		return ""+playDeck;
+		for(int i = 0;i<playDeck.size();i++) {
+			
+			System.out.println(playDeck.get(i));
+			
+		}
+		
 	}
 }

@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
@@ -18,6 +19,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
 			Parent root = FXMLLoader.load(getClass().getResource("graphicorg.fxml"));
 
 			Scene scene = new Scene(root);
@@ -26,6 +28,10 @@ public class Main extends Application {
 
 
 			primaryStage.setScene(scene);
+			Image new1 = new Image(getClass().getResourceAsStream("Cards/red_joker.png"));
+			primaryStage.setTitle("Video Poker");
+			primaryStage.getIcons().add(new1);
+			primaryStage.setResizable(false);
 			primaryStage.show();
 			
 		} catch(Exception e) {

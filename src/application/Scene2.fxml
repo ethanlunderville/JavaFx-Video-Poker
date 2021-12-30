@@ -9,8 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene2Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene2Controller">
    <children>
+      <ImageView fitHeight="709.0" fitWidth="828.0" layoutX="-26.0" layoutY="-138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@backround%20photo.jpg" />
+         </image>
+      </ImageView>
       <HBox layoutX="43.0" layoutY="43.0" prefHeight="141.0" prefWidth="520.0">
          <children>
             <ImageView fx:id="one" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleClick1" pickOnBounds="true" preserveRatio="true">
@@ -47,7 +52,7 @@
       </ImageView>
       <VBox layoutX="239.0" layoutY="268.0" prefHeight="122.0" prefWidth="259.0">
          <children>
-            <Label fx:id="h" prefHeight="50.0" prefWidth="206.0" text="Click the cards that you would like to keep">
+            <Label fx:id="h" prefHeight="50.0" prefWidth="206.0" text="Click the cards that you would like to keep" textFill="WHITE">
                <font>
                   <Font name="Impact" size="12.0" />
                </font>
