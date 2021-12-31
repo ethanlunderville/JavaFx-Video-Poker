@@ -1,5 +1,5 @@
 # JavaFx-Video-Poker
-JavaFx implementation of Video Poker card game
+JavaFx GUI implementation of Video Poker card game
 
 Directions:
 
