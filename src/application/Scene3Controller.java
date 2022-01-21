@@ -23,83 +23,84 @@ public class Scene3Controller {
 	@FXML
 	ImageView six, seven, eight, nine, ten;
 	@FXML
-	Label handl;
-	
-	
+	Label handResult;
+
+
 	private Stage stage;
 	private Scene scene;
 	private Parent root;
 	private List<Card> handT;
 	private OneDeck deck;
-	
-	
-	
-	public void S1(ActionEvent event) throws IOException {
 
+
+	//Sets up scene 1
+	public void S1(ActionEvent event) throws IOException {
+		//Loads FXML
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("graphicorg.fxml"));	
 		root = loader.load();	
-		
-		//Automatically checks the playerHand within the constructor of the 
-		// video poker object and updates the values of the static balance 
-		// found within the VideoPoker class
-		
 		Scene1Controller Scene1Controller = loader.getController();
+		//Updates player balance in scene 1
 		Scene1Controller.UpdateBal();
-		
+		//Checks if you ran out of money a closes the program if you did
 		if(VideoPoker.getPlayerBalance()<1) {
-		
-	Alert o = new Alert(AlertType.WARNING);
-	o.setContentText("You do not have enough money to play again!");
-	o.showAndWait();
-	Platform.exit();
+
+			Alert o = new Alert(AlertType.WARNING);
+			o.setContentText("You do not have enough money to play again!");
+			o.showAndWait();
+			Platform.exit();
 		}
+		//General JavaFx rendering code
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 
-		
+
 	}
+	//For sending hands between controllers
 	public void transport(List<Card> l) {
 		this.handT=l;
-		
+
 	}
+	//For sending decks between controllers
 	public void transport(OneDeck deck) {
 		this.deck=deck;
-		
+
 	}
-	
+	//Adds however many cards to those that the player selected in order to make a hand consisting of five cards
 	public void try1()  {
-	List<Card> temp = null;
-	try {
-		temp = deck.deal(5-handT.size());
-	} catch (PlayingCardException e) {
-	
-		e.printStackTrace();
-	}
-	for(int i = 0;i<temp.size();i++) {
-		handT.add(temp.get(i));
+		List<Card> temp = null;
 		
+		try {
+			
+			temp = deck.deal(5-handT.size());
+			
+		} catch (PlayingCardException e) {
+
+			e.printStackTrace();
+		}
+		
+		for(int i = 0;i<temp.size();i++) {
+			
+			handT.add(temp.get(i));
+
+		}
+		//Populates the GUI with images of the updates hand
+		six.setImage(handT.get(0).getCardVis());
+		seven.setImage(handT.get(1).getCardVis());
+		eight.setImage(handT.get(2).getCardVis());
+		nine.setImage(handT.get(3).getCardVis());
+		ten.setImage(handT.get(4).getCardVis());
+
+		//Checks the hand and displays the result
+		VideoPoker videoPoker = new VideoPoker(handT);
+		
+		handResult.setText(videoPoker.checkHands());
+
 	}
-	//System.out.println(six);
-	six.setImage(handT.get(0).getCardVis());
-	seven.setImage(handT.get(1).getCardVis());
-	eight.setImage(handT.get(2).getCardVis());
-	nine.setImage(handT.get(3).getCardVis());
-	ten.setImage(handT.get(4).getCardVis());
-	
-	System.out.println(handT);
-	
-	VideoPoker videoPoker = new VideoPoker(handT);
-	handl.setText(videoPoker.checkHands());
-	
-}
-	
-	
-	
+	//Stops the program
 	public void exit(ActionEvent event) {
 		Platform.exit();
 	}
-	
-	
+
 }

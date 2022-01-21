@@ -24,12 +24,12 @@ public class Scene2Controller {
 	private Scene scene;
 	private Parent root;
 
-	private OneDeck k = new OneDeck();
+	private OneDeck deck = new OneDeck();
 	
 	List<Card> hand = new ArrayList<Card>();
 	List<Card> updatedHand = new ArrayList<Card>() ;
 
-
+	//Deletes duplicates from a list of cards ensuring that there is at most 1 instance of any given card within a list of cards
 	public void deleteDuplicates() {
 		for (int i = 0 ;i<updatedHand.size(); i++) {
 			for(int z= 0 ;z<updatedHand.size(); z++) {
@@ -48,11 +48,11 @@ public class Scene2Controller {
 
 	}
 
-
+	//Sets up scene 3
 	public void S3(ActionEvent event) throws IOException {
 
 
-		//deletes the duplicates from the hand
+		//Deletes the duplicates from the hand
 		deleteDuplicates();
 		
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Scene3.fxml"));	
@@ -61,26 +61,27 @@ public class Scene2Controller {
 		Scene3Controller Scene3Controller = loader.getController();
 		//Sends the selected cards to the next scene
 		Scene3Controller.transport(updatedHand);
+		//Transports the deck to the scene three controller
+		Scene3Controller.transport(deck);
 		
-		Scene3Controller.transport(k);
-		//displays selected cards as well as new cards
+		//Displays selected cards as well as the newly drawn cards in one hand
 		Scene3Controller.try1();
 
-
+		//General JavaFx rendering code
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 
 	}
-
+	//Gets a random hand and displays it
 	public void try1() {
 		
-		k.shuffle();
+		deck.shuffle();
 		
 		try {
 			
-			hand = k.deal(5);
+			hand = deck.deal(5);
 			
 		} catch (PlayingCardException e) {
 			e.printStackTrace();
@@ -95,16 +96,17 @@ public class Scene2Controller {
 
 
 
-	public OneDeck getK() {
-		return k;
+	public OneDeck getDeck() {
+		return deck;
 	}
 
 
-	public void setK(OneDeck k) {
-		this.k = k;
+	public void setDeck(OneDeck k) {
+		this.deck = k;
 	}
 
-	//the methods add the clicked on cards to the new deck that will be past to the next scene 
+	//These methods add the clicked on cards to the new deck that will be past to the next scene 
+	//and will be a part of the final deck
 	
 	public void handleClick1() {
 

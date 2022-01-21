@@ -35,31 +35,33 @@ class PlayingCardException extends Exception {
 	}
 }
 
+//Card Definition
 class Card {
 
 	static final String[] Suit = {"","Clubs", "Diamonds", "Hearts", "Spades" };
 	static final String[] Rank = {"","A","2","3","4","5","6","7","8","9","10","J","Q","K"};
 
-
+	//Rank, Suit and Image
 	private int cardRank; 
 	private int cardSuit;  
 	private Image cardVis;
+
 	public Image getCardVis() {
 		return cardVis;
 	}
 
-
+	//Assigns image to a card
 	public void setCardVis(Image cardVis) {
 		this.cardVis = cardVis;
 	}
 
 
-	//card constructor
+	//Card constructor
 	public Card(int rank, int suit){ 
-	
-			cardRank = rank;
-		
-			cardSuit = suit;
+
+		cardRank = rank;
+
+		cardSuit = suit;
 	}
 
 
@@ -72,26 +74,27 @@ class Card {
 
 
 
-
+//Deck definition using a list of cards
 class OneDeck {
+
 	public List<Card> saveDeck;   
 	public  List<Card> playDeck;
 
-//Creates and saves copy of a deck
+	//Creates deck
 	public OneDeck()
 	{
 		try {
 			saveDeck = new ArrayList<Card>();
 			playDeck = new ArrayList<Card>();
-			//creates the save deck
+			//Creates the save deck
 			for(int i =1;i<5;i++) {
 				for(int s = 1;s<14;s++) {
 
 					saveDeck.add(new Card(s,i));
 				}
-				
+
 			}
-			
+			//Adding all of the respective images to each card
 			saveDeck.get(0).setCardVis(new Image(getClass().getResourceAsStream("Cards/ace_of_clubs.png")));
 			saveDeck.get(1).setCardVis(new Image(getClass().getResourceAsStream("Cards/2_of_clubs.png")));
 			saveDeck.get(2).setCardVis(new Image(getClass().getResourceAsStream("Cards/3_of_clubs.png")));
@@ -147,20 +150,19 @@ class OneDeck {
 			saveDeck.get(49).setCardVis(new Image(getClass().getResourceAsStream("Cards/jack_of_spades2.png")));
 			saveDeck.get(50).setCardVis(new Image(getClass().getResourceAsStream("Cards/queen_of_spades2.png")));
 			saveDeck.get(51).setCardVis(new Image(getClass().getResourceAsStream("Cards/king_of_spades2.png")));
-			
-			//copies save deck to the playdeck
+
+			//Saves a copy of the un-altered deck
 			for (int i = 0;i<saveDeck.size(); i++) {
 				playDeck.add(saveDeck.get(i));
 			}
 		}
-		catch(Exception PlayingCardException) {
-			new PlayingCardException("Card Exception");
-		}
-	
-		
-	
-	}
 
+		catch(Exception PlayingCardException) {
+			new PlayingCardException("Something went wrong when building the deck");
+		}
+
+	}
+	//Shuffles the playing deck using RNG
 	public void shuffle()
 	{
 		for(int i = 0;i<playDeck.size();i++) {
@@ -169,48 +171,54 @@ class OneDeck {
 			Card temp = playDeck.get(i);
 			playDeck.set(i, playDeck.get(random));
 			playDeck.set(random, temp);
-			}
+		}
 
 	}
-
+	//Deals cards from the deck
 	public List<Card> deal(int numberCards) throws PlayingCardException
 	{
 		List<Card> reList = null;
-try {
-		if(numberCards>playDeck.size()) {
-			throw new PlayingCardException("Not enough cards to deal");
 
-		}
-		else 
-		{
-			reList = new ArrayList<Card>();
+		try {
 
-			for(int i = 0;i<numberCards;i++) {
-				reList.add(playDeck.get(i));	
-				
+			if(numberCards>playDeck.size()) {
+
+				throw new PlayingCardException("Not enough cards to deal");
 
 			}
-			for(int i = 0;i<reList.size();i++) {
-				playDeck.remove(reList.get(i));
+			else 
+			{
+				//Deals the cards in the form of a list and takes those cards out of the deck
+				reList = new ArrayList<Card>();
+
+				for(int i = 0;i<numberCards;i++) {
+					reList.add(playDeck.get(i));	
+
+
+				}
+				for(int i = 0;i<reList.size();i++) {
+					playDeck.remove(reList.get(i));
+				}
+
 			}
 
-		}
+			return reList;
 
-		return reList;
-}catch(Exception e) {
-	return reList;
-}
+		}catch(Exception e) {
+			return reList;
+		}
 	}
-//resets the deck back to the saved deck copy
+	
+	//Resets the deck back to the saved deck copy
 	public void reset()
 	{
 		playDeck.clear();
 		for (int i = 0;i<saveDeck.size(); i++) {
 			playDeck.add(saveDeck.get(i));
-			}
+		}
 	}
 
-//returns amount of cards in deck
+	//Returns amount of cards in deck
 	public int remainSize()
 	{
 		return playDeck.size();
@@ -218,10 +226,10 @@ try {
 	public void toString1()
 	{
 		for(int i = 0;i<playDeck.size();i++) {
-			
+
 			System.out.println(playDeck.get(i));
-			
+
 		}
-		
+
 	}
 }

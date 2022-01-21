@@ -20,6 +20,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
+			//General Code to create the scene and set various properties
 			Parent root = FXMLLoader.load(getClass().getResource("graphicorg.fxml"));
 
 			Scene scene = new Scene(root);
@@ -39,6 +40,7 @@ public class Main extends Application {
 		}
 	}
 	
+	// Driver
 	public static void main(String[] args) {
 		launch(args);
 	}
