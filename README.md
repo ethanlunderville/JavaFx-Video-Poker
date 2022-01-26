@@ -1,8 +1,8 @@
 # JavaFx-Video-Poker
 
-JavaFx GUI implementation of Video Poker card game
+JavaFx GUI implementation of Video Poker card game.
 
-This is an extension of one of my school projects where I was tasked to write a terminal version of the game
+This is an extension of one of my school projects where I was tasked to write a terminal version of the game.
 
 Directions:
 
